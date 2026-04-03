@@ -254,7 +254,7 @@ const allProjects: Project[] = [
   },
 ];
 
-const categories = ['All', 'Machine Learning', 'Data Science', 'AI/LLM', 'Computer Vision', 'Web Development', 'Automation', 'Game Development', 'Backend', 'MLOps'];
+const categories = ['All', 'Live Projects', 'Machine Learning', 'Data Science', 'AI/LLM', 'Computer Vision', 'Web Development', 'Automation', 'Game Development', 'Backend', 'MLOps'];
 
 const languageColors: Record<string, string> = {
   'Python': 'bg-blue-500',
@@ -270,12 +270,29 @@ export default function AllProjects({ darkMode }: AllProjectsProps) {
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredProjects = allProjects.filter((project) => {
-    const matchesCategory = activeCategory === 'All' || project.category === activeCategory;
+    let matchesCategory = false;
+    if (activeCategory === 'All') matchesCategory = true;
+    else if (activeCategory === 'Live Projects') matchesCategory = Boolean(project.Live_Link);
+    else if (activeCategory === 'AI/ML') matchesCategory = ['AI/LLM', 'Machine Learning', 'Computer Vision'].includes(project.category);
+    else matchesCategory = project.category === activeCategory;
+
     const matchesSearch = project.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       project.language.toLowerCase().includes(searchQuery.toLowerCase());
+      
     return matchesCategory && matchesSearch;
   });
+
+  const handleStatClick = (filterType: string) => {
+    if (filterType === 'Python') {
+      setActiveCategory('All');
+      setSearchQuery('Python');
+    } else {
+      setSearchQuery('');
+      setActiveCategory(filterType);
+    }
+    window.scrollTo({ top: 300, behavior: 'smooth' });
+  };
 
   return (
     <div className={`min-h-screen ${darkMode ? 'bg-gray-950 text-white' : 'bg-gray-50 text-gray-900'}`}>
@@ -333,14 +350,15 @@ export default function AllProjects({ darkMode }: AllProjectsProps) {
           className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-12"
         >
           {[
-            { label: 'Total Projects', value: allProjects.length.toString(), icon: <Code2 size={20} /> },
-            { label: 'Python Projects', value: allProjects.filter(p => p.language === 'Python').length.toString(), icon: <Brain size={20} /> },
-            { label: 'AI/ML Projects', value: allProjects.filter(p => ['AI/LLM', 'Machine Learning', 'Computer Vision'].includes(p.category)).length.toString(), icon: <Bot size={20} /> },
-            { label: 'Categories', value: (categories.length - 1).toString(), icon: <Database size={20} /> },
+            { id: 'All', label: 'Total Projects', value: allProjects.length.toString(), icon: <Code2 size={20} /> },
+            { id: 'Python', label: 'Python Projects', value: allProjects.filter(p => p.language === 'Python').length.toString(), icon: <Brain size={20} /> },
+            { id: 'AI/ML', label: 'AI/ML Projects', value: allProjects.filter(p => ['AI/LLM', 'Machine Learning', 'Computer Vision'].includes(p.category)).length.toString(), icon: <Bot size={20} /> },
+            { id: 'Live Projects', label: 'Live Projects', value: allProjects.filter(p => p.Live_Link).length.toString(), icon: <Globe size={20} /> },
           ].map((stat) => (
-            <div
+            <button
               key={stat.label}
-              className={`p-4 rounded-2xl border text-center ${darkMode ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'
+              onClick={() => handleStatClick(stat.id)}
+              className={`p-4 rounded-2xl border text-center flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-lg focus:outline-none w-full ${darkMode ? 'bg-gray-900 border-gray-800 hover:border-blue-500/50' : 'bg-white border-gray-200 hover:border-blue-300'
                 }`}
             >
               <div className={`inline-flex p-2 rounded-lg mb-2 ${darkMode ? 'bg-blue-500/10 text-blue-400' : 'bg-blue-50 text-blue-600'
@@ -349,7 +367,7 @@ export default function AllProjects({ darkMode }: AllProjectsProps) {
               </div>
               <div className="text-2xl font-black gradient-text">{stat.value}</div>
               <div className={`text-xs ${darkMode ? 'text-gray-500' : 'text-gray-400'}`}>{stat.label}</div>
-            </div>
+            </button>
           ))}
         </motion.div>
 
@@ -406,13 +424,16 @@ export default function AllProjects({ darkMode }: AllProjectsProps) {
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project, idx) => (
-            <motion.div
+            <motion.a
+              href={project.Live_Link || project.github}
+              target="_blank"
+              rel="noopener noreferrer"
               key={project.name}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.05 }}
               whileHover={{ y: -6 }}
-              className={`group relative rounded-2xl border overflow-hidden transition-all duration-300 ${darkMode
+              className={`block group relative rounded-2xl border overflow-hidden transition-all duration-300 ${darkMode
                   ? 'bg-gray-900 border-gray-800 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10'
                   : 'bg-white border-gray-200 hover:border-blue-300 hover:shadow-xl'
                 }`}
@@ -454,14 +475,11 @@ export default function AllProjects({ darkMode }: AllProjectsProps) {
                   </span>
                 </div>
 
-                {/* Project Link */}
-                <a
-                  href={project.github || project.Live_Link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                {/* Project Link Wrapper (Changed to div since parent is now an anchor) */}
+                <div
                   className={`inline-flex items-center gap-2 text-sm font-medium transition-all duration-200 ${darkMode
-                      ? 'text-gray-400 hover:text-blue-400'
-                      : 'text-gray-500 hover:text-blue-600'
+                      ? 'text-gray-400 group-hover:text-blue-400'
+                      : 'text-gray-500 group-hover:text-blue-600'
                     }`}
                 >
                   {project.github ? (
@@ -471,12 +489,12 @@ export default function AllProjects({ darkMode }: AllProjectsProps) {
                   )}
                   {project.github ? 'View on GitHub' : 'Live Link'}
                   <ExternalLink size={14} />
-                </a>
+                </div>
               </div>
 
               {/* Hover gradient overlay */}
               <div className={`absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-300 bg-gradient-to-br ${project.color}`} />
-            </motion.div>
+            </motion.a>
           ))}
         </div>
 

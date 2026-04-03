@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, Download, ExternalLink, Code2, Brain, Database, Terminal } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import ProfileImage from './ProfileImage';
 
 interface HeroProps {
@@ -76,7 +77,7 @@ export default function Hero({ darkMode }: HeroProps) {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl sm:text-2xl font-semibold mb-4 gradient-text-alt"
             >
-              Aspiring AI Engineer
+              Data Science, AI & ML Student
             </motion.p>
 
             <motion.p
@@ -87,8 +88,7 @@ export default function Hero({ darkMode }: HeroProps) {
                 darkMode ? 'text-gray-400' : 'text-gray-500'
               }`}
             >
-              Turning Data into Intelligence. Final-year B.Tech student passionate about building 
-              AI-powered solutions that make a difference.
+              Turning Data into Intelligence. Final-year B.Tech student actively seeking full-time roles and internships in Data Science, Artificial Intelligence, and Machine Learning.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -98,14 +98,14 @@ export default function Hero({ darkMode }: HeroProps) {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <a
-                href="#projects"
+              <Link
+                to="/projects"
                 className="group inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-semibold text-lg shadow-xl shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-300 hover:-translate-y-1"
               >
                 <Code2 className="mr-2" size={20} />
                 View Projects
                 <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
               <a
                 href="https://drive.google.com/file/d/12LLJMFJCiNuTOZrlK0GmokbilSw5hyMp/view?usp=sharing"
                 target="_blank"

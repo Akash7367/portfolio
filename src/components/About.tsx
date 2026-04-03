@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { GraduationCap, Target, Award, Heart } from 'lucide-react';
-import ProfileImage from './ProfileImage';
 
 interface AboutProps {
   darkMode: boolean;
@@ -10,7 +9,7 @@ const stats = [
   { number: '22+', label: 'Projects', icon: <Target size={24} /> },
   { number: '10+', label: 'Technologies', icon: <Heart size={24} /> },
   { number: '4', label: 'Achievements', icon: <Award size={24} /> },
-  { number: '200+', label: 'LeetCode Days', icon: <GraduationCap size={24} /> },
+  { number: '600+', label: 'LeetCode DSA Problems', icon: <GraduationCap size={24} /> },
 ];
 
 export default function About({ darkMode }: AboutProps) {
@@ -52,45 +51,67 @@ export default function About({ darkMode }: AboutProps) {
                 ? 'bg-gray-900 border-gray-800'
                 : 'bg-gray-50 border-gray-200'
             }`}>
-              <div className="space-y-6">
+              <div className="space-y-8 text-left">
+                {/* About & Objective */}
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-blue-500/10 text-blue-400 flex-shrink-0">
-                    <GraduationCap size={24} />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-1">Education</h3>
-                    <p className={darkMode ? 'text-gray-400' : 'text-gray-600'}>
-                      B.Tech in Artificial Intelligence & Machine Learning
-                    </p>
-                    <p className={`text-sm ${darkMode ? 'text-gray-500' : 'text-gray-400'}`}>
-                      Final Year, Class of 2026
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-purple-500/10 text-purple-400 flex-shrink-0">
+                  <div className="p-3 rounded-xl bg-purple-500/10 text-purple-400 flex-shrink-0 mt-1">
                     <Target size={24} />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-1">Objective</h3>
-                    <p className={darkMode ? 'text-gray-400' : 'text-gray-600'}>
-                      Seeking entry-level roles and internships in Data Science, Machine Learning, 
-                      and AI Engineering where I can apply my technical skills and passion for 
-                      building intelligent systems.
+                    <h3 className="text-xl font-bold mb-2">About Me</h3>
+                    <p className={`leading-relaxed mb-3 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                      I am a highly motivated aspiring AI Engineer and Data Scientist with a strong foundation in Machine Learning, Deep Learning, and Computer Vision. I am deeply passionate about building intelligent systems that solve real-world problems. From developing real-time face recognition systems to building interactive ML pipelines and automation bots, I love analyzing data to create actionable intelligence.
+                    </p>
+                    <p className={`leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                      I am actively seeking entry-level roles and internships in Data Science, Machine Learning, and AI Engineering where I can contribute to innovative projects and continue to grow as a developer.
                     </p>
                   </div>
                 </div>
 
+                {/* Education */}
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-pink-500/10 text-pink-400 flex-shrink-0">
+                  <div className="p-3 rounded-xl bg-blue-500/10 text-blue-400 flex-shrink-0 mt-1">
+                    <GraduationCap size={24} />
+                  </div>
+                  <div className="w-full">
+                    <h3 className="text-xl font-bold mb-4">Education</h3>
+                    
+                    <div className={`relative pl-4 border-l-2 space-y-6 ${darkMode ? 'border-gray-800' : 'border-gray-200'}`}>
+                      <div className="relative">
+                        <div className={`absolute -left-[21px] top-1.5 w-2 h-2 rounded-full ring-4 ${darkMode ? 'bg-blue-400 ring-gray-900 border border-gray-900' : 'bg-blue-500 ring-white border border-white'}`} />
+                        <h4 className={`font-bold ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>B.Tech in Artificial Intelligence & Machine Learning</h4>
+                        <p className={`text-sm mt-1 mb-1 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>8th Semester, Class of 2026</p>
+                        <span className={`inline-block text-xs font-semibold px-2 py-1 rounded-md ${darkMode ? 'bg-green-500/10 text-green-400' : 'bg-green-50 text-green-600'}`}>CGPA: 8.13/10</span>
+                      </div>
+
+                      <div className="relative">
+                        <div className={`absolute -left-[21px] top-1.5 w-2 h-2 rounded-full ring-4 ${darkMode ? 'bg-gray-600 ring-gray-900 border border-gray-900' : 'bg-gray-400 ring-white border border-white'}`} />
+                        <h4 className={`font-bold ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>Class 12th (Senior Secondary)</h4>
+                        <p className={`text-sm mt-1 mb-1 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>B.B.N.COLLEGE, BATHUA BAZAR, GOPALGANJ</p>
+                        <span className={`inline-block text-xs font-semibold px-2 py-1 rounded-md ${darkMode ? 'bg-green-500/10 text-green-400' : 'bg-green-50 text-green-600'}`}>Score: 78.8%</span>
+                      </div>
+
+                      <div className="relative">
+                        <div className={`absolute -left-[21px] top-1.5 w-2 h-2 rounded-full ring-4 ${darkMode ? 'bg-gray-600 ring-gray-900 border border-gray-900' : 'bg-gray-400 ring-white border border-white'}`} />
+                        <h4 className={`font-bold ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>Class 10th (Secondary)</h4>
+                        <p className={`text-sm mt-1 mb-1 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>50446-S M ACADEMY MAHUWA PANCHDEORI GOPALGANJ BR</p>
+                        <span className={`inline-block text-xs font-semibold px-2 py-1 rounded-md ${darkMode ? 'bg-green-500/10 text-green-400' : 'bg-green-50 text-green-600'}`}>Score: 81%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Interests */}
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-xl bg-pink-500/10 text-pink-400 flex-shrink-0 mt-1">
                     <Heart size={24} />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-1">Interests</h3>
-                    <p className={darkMode ? 'text-gray-400' : 'text-gray-600'}>
-                      Deep Learning, Computer Vision, NLP, LLMs, RAG Systems, 
-                      and building end-to-end AI applications.
+                    <h3 className="text-xl font-bold mb-2">Focus Areas & Interests</h3>
+                    <p className={`text-sm leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                      <strong className={darkMode ? 'text-gray-300' : 'text-gray-700'}>Data Science:</strong> Predictive Modeling, Statistical Analysis, and extracting actionable insights from complex datasets.<br className="mb-1" />
+                      <strong className={darkMode ? 'text-gray-300' : 'text-gray-700'}>Machine Learning:</strong> Supervised & Unsupervised Learning, Feature Engineering, and Model Optimization.<br className="mb-1" />
+                      <strong className={darkMode ? 'text-gray-300' : 'text-gray-700'}>Artificial Intelligence:</strong> Deep Learning, Computer Vision, Natural Language Processing (LLMs & RAG), and building end-to-end AI applications.
                     </p>
                   </div>
                 </div>
