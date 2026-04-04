@@ -158,14 +158,14 @@ export default function Hero({ darkMode }: HeroProps) {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="hidden lg:flex justify-center"
+            className="flex justify-center order-first lg:order-last mb-8 lg:mb-0"
           >
             <div className="relative">
               {/* Glowing ring */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 blur-xl opacity-40 animate-pulse" />
               
               {/* Profile photo container */}
-              <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-transparent bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 p-1 shadow-2xl profile-glow">
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-transparent bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 p-1 shadow-2xl profile-glow">
                 <div className={`w-full h-full rounded-full overflow-hidden ${
                   darkMode ? 'bg-gray-900' : 'bg-white'
                 }`}>
