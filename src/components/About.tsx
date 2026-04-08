@@ -16,7 +16,7 @@ export default function About({ darkMode }: AboutProps) {
   return (
     <section
       id="about"
-      className={`section-padding ${darkMode ? 'bg-gray-900/50' : 'bg-white'}`}
+      className={`relative section-padding ${darkMode ? 'bg-gray-900/20 backdrop-blur-sm' : 'bg-white/40 backdrop-blur-sm'}`}
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}

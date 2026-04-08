@@ -11,9 +11,7 @@ export default function Hero({ darkMode }: HeroProps) {
   return (
     <section
       id="home"
-      className={`relative min-h-screen flex items-center justify-center overflow-hidden ${
-        darkMode ? 'bg-gray-950' : 'bg-gray-50'
-      }`}
+      className={`relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent`}
     >
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
@@ -28,14 +26,43 @@ export default function Hero({ darkMode }: HeroProps) {
           style={{ animationDelay: '1.5s' }}
         />
         
-        {/* Grid pattern */}
-        <div
-          className={`absolute inset-0 ${darkMode ? 'opacity-5' : 'opacity-10'}`}
-          style={{
-            backgroundImage: `linear-gradient(${darkMode ? 'rgba(59,130,246,0.3)' : 'rgba(59,130,246,0.2)'} 1px, transparent 1px), linear-gradient(90deg, ${darkMode ? 'rgba(59,130,246,0.3)' : 'rgba(59,130,246,0.2)'} 1px, transparent 1px)`,
-            backgroundSize: '60px 60px',
-          }}
-        />
+        {/* 3D Grid pattern */}
+        <div className="absolute inset-0 perspective-container pointer-events-none">
+          <div
+            className={`absolute inset-[-100%] bottom-[-50%] animated-3d-grid ${
+              darkMode ? 'opacity-30' : 'opacity-20'
+            }`}
+            style={{
+              backgroundImage: `linear-gradient(${darkMode ? 'rgba(59,130,246,0.4)' : 'rgba(59,130,246,0.3)'} 2px, transparent 2px), linear-gradient(90deg, ${darkMode ? 'rgba(59,130,246,0.4)' : 'rgba(59,130,246,0.3)'} 2px, transparent 2px)`,
+              backgroundSize: '100px 100px',
+            }}
+          />
+          {/* Horizon & Edge Fade */}
+          <div className={`absolute inset-0 bg-gradient-to-b ${darkMode ? 'from-gray-950 via-gray-950/80' : 'from-gray-50 via-gray-50/80'} to-transparent`} />
+          <div className={`absolute inset-0 bg-gradient-to-t ${darkMode ? 'from-gray-950 via-gray-950/20' : 'from-gray-50 via-gray-50/20'} to-transparent`} />
+        </div>
+
+        {/* Floating 3D Geometric Shapes */}
+        <div className="absolute inset-0 perspective-container pointer-events-none">
+          <motion.div
+            className={`absolute top-1/4 left-[10%] w-24 h-24 border-[3px] ${darkMode ? 'border-blue-500/20 bg-blue-500/5' : 'border-blue-500/20 bg-blue-500/5'} rounded-xl backdrop-blur-sm`}
+            animate={{ rotateX: [0, 360], rotateY: [0, 360], z: [0, 100, 0] }}
+            transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+            style={{ transformStyle: 'preserve-3d' }}
+          />
+          <motion.div
+            className={`absolute bottom-1/3 right-[10%] w-32 h-32 border-[3px] ${darkMode ? 'border-purple-500/20 bg-purple-500/5' : 'border-purple-500/20 bg-purple-500/5'} rounded-full backdrop-blur-sm`}
+            animate={{ rotateX: [360, 0], rotateZ: [0, 360], z: [0, -150, 0] }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            style={{ transformStyle: 'preserve-3d' }}
+          />
+          <motion.div
+            className={`absolute top-1/2 right-[30%] w-16 h-16 border-[2px] ${darkMode ? 'border-pink-500/30 bg-pink-500/5' : 'border-pink-500/30 bg-pink-500/5'} backdrop-blur-sm`}
+            animate={{ rotateX: [0, 360], rotateY: [360, 0], z: [0, 50, 0] }}
+            transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+            style={{ transformStyle: 'preserve-3d' }}
+          />
+        </div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">

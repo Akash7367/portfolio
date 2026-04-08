@@ -10,6 +10,7 @@ import Achievements from './components/Achievements';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import AllProjects from './components/AllProjects';
+import BackgroundLayer from './components/BackgroundLayer';
 
 function HomePage({ darkMode }: { darkMode: boolean }) {
   return (
@@ -60,21 +61,24 @@ function App() {
     <Router>
       <div className={`${darkMode ? 'dark' : ''}`}>
         <div className={`min-h-screen transition-colors duration-500 ${darkMode ? 'bg-gray-950 text-white' : 'bg-gray-50 text-gray-900'}`}>
-          <Routes>
-            <Route path="/" element={
-              <>
-                <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-                <HomePage darkMode={darkMode} />
-              </>
-            } />
-            <Route path="/projects" element={
-              <>
-                <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-                <AllProjects darkMode={darkMode} />
-                <Footer darkMode={darkMode} />
-              </>
-            } />
-          </Routes>
+          <BackgroundLayer darkMode={darkMode} />
+          <div className="relative z-10">
+            <Routes>
+              <Route path="/" element={
+                <>
+                  <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+                  <HomePage darkMode={darkMode} />
+                </>
+              } />
+              <Route path="/projects" element={
+                <>
+                  <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+                  <AllProjects darkMode={darkMode} />
+                  <Footer darkMode={darkMode} />
+                </>
+              } />
+            </Routes>
+          </div>
         </div>
       </div>
     </Router>

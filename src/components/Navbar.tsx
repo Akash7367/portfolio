@@ -125,7 +125,7 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
                   darkMode ? 'text-gray-400 hover:text-blue-400' : 'text-gray-500 hover:text-blue-600'
                 }`}
               >
-                <span className="font-bold text-[13px] leading-none">LC</span>
+                <span className="font-bold text-xs leading-none">LeetCode</span>
               </a>
               <a
                 href="https://www.codechef.com/users/akashgupta7965/"
@@ -136,7 +136,7 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
                   darkMode ? 'text-gray-400 hover:text-blue-400' : 'text-gray-500 hover:text-blue-600'
                 }`}
               >
-                <span className="font-bold text-[13px] leading-none">CC</span>
+                <span className="font-bold text-xs leading-none">CodeChef</span>
               </a>
               <a
                 href="https://www.geeksforgeeks.org/profile/akashgupta73?tab=activity"
@@ -147,7 +147,7 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
                   darkMode ? 'text-gray-400 hover:text-blue-400' : 'text-gray-500 hover:text-blue-600'
                 }`}
               >
-                <span className="font-bold text-[13px] leading-none">GFG</span>
+                <span className="font-bold text-xs leading-none">GFG</span>
               </a>
               <a
                 href="mailto:akashgupta7965@gmail.com"
@@ -257,7 +257,7 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
                   title="LeetCode"
                   className={`p-2 rounded-lg flex items-center justify-center ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}
                 >
-                  <span className="font-bold text-[14px] leading-none">LC</span>
+                  <span className="font-bold text-[14px] leading-none">LeetCode</span>
                 </a>
                 <a
                   href="https://www.codechef.com/users/akashgupta7965/"
@@ -266,7 +266,7 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
                   title="CodeChef"
                   className={`p-2 rounded-lg flex items-center justify-center ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}
                 >
-                  <span className="font-bold text-[14px] leading-none">CC</span>
+                  <span className="font-bold text-[14px] leading-none">CodeChef</span>
                 </a>
                 <a
                   href="https://www.geeksforgeeks.org/profile/akashgupta73?tab=activity"

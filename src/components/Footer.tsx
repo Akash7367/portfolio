@@ -87,7 +87,7 @@ export default function Footer({ darkMode }: FooterProps) {
                   : 'bg-gray-100 text-gray-500 hover:bg-blue-50 hover:text-blue-600'
               }`}
             >
-              <span className="font-bold text-[14px] leading-none">LC</span>
+              <span className="font-bold text-[14px] leading-none">LeetCode</span>
             </a>
             <a
               href="https://www.codechef.com/users/akashgupta7965/"
@@ -100,7 +100,7 @@ export default function Footer({ darkMode }: FooterProps) {
                   : 'bg-gray-100 text-gray-500 hover:bg-blue-50 hover:text-blue-600'
               }`}
             >
-              <span className="font-bold text-[14px] leading-none">CC</span>
+              <span className="font-bold text-[14px] leading-none">CodeChef</span>
             </a>
             <a
               href="https://www.geeksforgeeks.org/profile/akashgupta73?tab=activity"

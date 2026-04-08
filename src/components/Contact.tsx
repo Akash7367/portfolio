@@ -143,7 +143,7 @@ export default function Contact({ darkMode }: ContactProps) {
                       : 'bg-gray-100 text-gray-500 hover:bg-blue-50 hover:text-blue-600'
                   }`}
                 >
-                  <span className="font-bold text-[16px] leading-none">LC</span>
+                  <span className="font-bold text-[14px] leading-none">LeetCode</span>
                 </motion.a>
                 <motion.a
                   href="https://www.codechef.com/users/akashgupta7965/"
@@ -158,7 +158,7 @@ export default function Contact({ darkMode }: ContactProps) {
                       : 'bg-gray-100 text-gray-500 hover:bg-blue-50 hover:text-blue-600'
                   }`}
                 >
-                  <span className="font-bold text-[16px] leading-none">CC</span>
+                  <span className="font-bold text-[14px] leading-none">CodeChef</span>
                 </motion.a>
                 <motion.a
                   href="https://www.geeksforgeeks.org/profile/akashgupta73?tab=activity"
@@ -173,7 +173,7 @@ export default function Contact({ darkMode }: ContactProps) {
                       : 'bg-gray-100 text-gray-500 hover:bg-blue-50 hover:text-blue-600'
                   }`}
                 >
-                  <span className="font-bold text-[16px] leading-none">GFG</span>
+                  <span className="font-bold text-[14px] leading-none">GFG</span>
                 </motion.a>
                 <motion.a
                   href="mailto:akashgupta7965@gmail.com"

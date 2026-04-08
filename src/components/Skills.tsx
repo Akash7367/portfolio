@@ -106,7 +106,7 @@ export default function Skills({ darkMode }: SkillsProps) {
   return (
     <section
       id="skills"
-      className={`section-padding ${darkMode ? 'bg-gray-950' : 'bg-gray-50'}`}
+      className={`relative section-padding bg-transparent`}
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}

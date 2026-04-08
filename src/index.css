@@ -86,3 +86,19 @@ html {
   background: rgba(59, 130, 246, 0.3);
   color: white;
 }
+
+/* 3D Background Grid */
+.perspective-container {
+  perspective: 1000px;
+}
+
+@keyframes gridForward {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 100px; }
+}
+
+.animated-3d-grid {
+  transform-origin: center top;
+  transform: rotateX(70deg) scale(2.5);
+  animation: gridForward 2s linear infinite;
+}
