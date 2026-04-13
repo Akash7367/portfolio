@@ -23,6 +23,16 @@ interface Project {
 
 const allProjects: Project[] = [
   {
+    name: 'Social-to-Lead Agentic Workflow',
+    description: 'An AI-powered local agent built with LangGraph that converts social media conversations into qualified leads. Features intent detection, RAG-based knowledge retrieval, and automated lead capture.',
+    language: 'Python',
+    category: 'AI/LLM',
+    icon: <Bot size={24} />,
+    color: 'from-violet-500 to-fuchsia-500',
+    github: 'https://github.com/Akash7367/ServiceHive_ML_assesment',
+    updated: 'Recently',
+  },
+  {
     name: 'Voice-Controlled Local AI Agent (Works Even on 8GB RAM)',
     description: 'An intelligent voice-controlled local AI agent featuring speech recognition, intent classification, and secure local tool execution while operating efficiently on 8GB RAM.',
     language: 'Python',
