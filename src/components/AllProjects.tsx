@@ -23,6 +23,17 @@ interface Project {
 
 const allProjects: Project[] = [
   {
+    name: 'Voice-Controlled Local AI Agent (Works Even on 8GB RAM)',
+    description: 'An intelligent voice-controlled local AI agent featuring speech recognition, intent classification, and secure local tool execution while operating efficiently on 8GB RAM.',
+    language: 'Python',
+    category: 'AI/LLM',
+    icon: <Bot size={24} />,
+    color: 'from-blue-500 to-indigo-500',
+    github: 'https://github.com/Akash7367/Local_AI_Agent',
+    Live_Link: 'https://localaiagent-twxulfwrigcagqtbecnomh.streamlit.app/',
+    updated: 'Recently',
+  },
+  {
     name: 'Kaggle Competition - Titanic Prediction',
     description: 'Machine learning model for predicting Titanic survival using feature engineering, data preprocessing, and ensemble methods. Competed on Kaggle with strong accuracy scores.',
     language: 'Python',
