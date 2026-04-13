@@ -116,7 +116,7 @@ export default function Footer({ darkMode }: FooterProps) {
               <span className="font-bold text-[14px] leading-none">GFG</span>
             </a>
             <a
-              href="mailto:akashgupta7965@gmail.com"
+              href="mailto:akashkumargupta1190@gmail.com"
               className={`p-2.5 rounded-xl transition-all duration-200 ${
                 darkMode
                   ? 'bg-gray-800 text-gray-400 hover:bg-blue-500/20 hover:text-blue-400'

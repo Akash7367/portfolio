@@ -150,7 +150,7 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
                 <span className="font-bold text-xs leading-none">GFG</span>
               </a>
               <a
-                href="mailto:akashgupta7965@gmail.com"
+                href="mailto:akashkumargupta1190@gmail.com"
                 className={`p-2 rounded-lg transition-all duration-200 hover:bg-blue-500/10 ${
                   darkMode ? 'text-gray-400 hover:text-blue-400' : 'text-gray-500 hover:text-blue-600'
                 }`}
@@ -278,7 +278,7 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
                   <span className="font-bold text-[14px] leading-none">GFG</span>
                 </a>
                 <a
-                  href="mailto:akashgupta7965@gmail.com"
+                  href="mailto:akashkumargupta1190@gmail.com"
                   className={`p-2 rounded-lg ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}
                 >
                   <Mail size={20} />
