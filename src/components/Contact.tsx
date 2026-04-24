@@ -32,14 +32,14 @@ export default function Contact({ darkMode }: ContactProps) {
     {
       icon: <Mail size={22} />,
       label: 'Email',
-      value: 'akashkumargupta1190@gmail.com',
-      href: 'mailto:akashkumargupta1190@gmail.com',
+      value: 'akashgupta7965@gmail.com',
+      href: 'mailto:akashgupta7965@gmail.com',
     },
     {
       icon: <Phone size={22} />,
       label: 'Phone',
-      value: '+91 9421133872',
-      href: 'tel:+919421133872',
+      value: '+91 7367840249',
+      href: 'tel:+917367840249',
     },
     {
       icon: <MapPin size={22} />,
@@ -176,7 +176,7 @@ export default function Contact({ darkMode }: ContactProps) {
                   <span className="font-bold text-[14px] leading-none">GFG</span>
                 </motion.a>
                 <motion.a
-                  href="mailto:akashkumargupta1190@gmail.com"
+                  href="mailto:akashgupta7965@gmail.com"
                   whileHover={{ scale: 1.1, y: -3 }}
                   whileTap={{ scale: 0.95 }}
                   className={`p-3 rounded-xl transition-all duration-200 ${
