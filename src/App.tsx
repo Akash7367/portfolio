@@ -1,3 +1,4 @@
+console.log("App.tsx loading...");
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -31,6 +32,7 @@ function HomePage({ darkMode }: { darkMode: boolean }) {
 function App() {
   const [darkMode, setDarkMode] = useState(true);
   const [loading, setLoading] = useState(true);
+  console.log("Current loading state:", loading);
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 1500);
