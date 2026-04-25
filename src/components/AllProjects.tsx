@@ -23,10 +23,21 @@ interface Project {
 
 const allProjects: Project[] = [
   {
-    name: 'Social-to-Lead Agentic Workflow',
+    name: 'HRMS Lite - Human Resource Management System',
+    description: 'A lightweight, professional HRMS built for end-to-end full-stack development. Features employee management, attendance tracking, and a real-time dashboard with department analytics.',
+    language: 'Python/React',
+    category: 'Web Development',
+    icon: <Database size={24} />,
+    color: 'from-blue-600 to-indigo-600',
+    github: 'https://github.com/Akash7367/ethara_ai-project',
+    Live_Link: 'https://etharaai-project-production-19ef.up.railway.app/',
+    updated: 'Just now',
+  },
+  {
+    name: 'Social Media Chat Analyzer & AI Chatbot',
     description: 'An AI-powered local agent built with LangGraph that converts social media conversations into qualified leads. Features intent detection, RAG-based knowledge retrieval, and automated lead capture.',
     language: 'Python',
-    category: 'AI/LLM',
+    category: 'Data Science',
     icon: <Bot size={24} />,
     color: 'from-violet-500 to-fuchsia-500',
     github: 'https://github.com/Akash7367/ServiceHive_ML_assesment',
@@ -117,8 +128,8 @@ const allProjects: Project[] = [
     updated: '3 weeks ago',
   },
   {
-    name: 'Face Recognition System',
-    description: 'Real-time face recognition system using OpenCV and deep learning. Implements facial detection, encoding, and matching for attendance tracking.',
+    name: 'Anti-Spoofing Face Recognition System',
+    description: 'Developed an advanced real-time face recognition attendance system with 95%+ accuracy. Implements anti-spoofing techniques using YOLOv8 to detect and prevent spoofing attempts (photos/videos).',
     language: 'Python',
     category: 'Computer Vision',
     icon: <Camera size={24} />,

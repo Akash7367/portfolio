@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Code2, MessageSquare, Camera, MousePointer, ArrowRight } from 'lucide-react';
+import { ExternalLink, Code2, MessageSquare, Camera, MousePointer, ArrowRight, Bot } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface ProjectsProps {
@@ -8,31 +8,31 @@ interface ProjectsProps {
 
 const featuredProjects = [
   {
-    title: 'Face Recognition Attendance System',
-    description: 'Built using OpenCV and ML techniques for real-time attendance tracking. Implements facial detection, recognition, and automated logging of attendance records.',
-    tech: ['OpenCV', 'Python', 'Machine Learning', 'NumPy'],
+    title: 'Anti-Spoofing Face Recognition',
+    description: 'Developed an advanced attendance system with 95%+ accuracy. Features real-time facial recognition, anti-spoofing protection against photos/videos, and automated logging.',
+    tech: ['OpenCV', 'Python', 'YOLOv8', 'Deep Learning'],
     icon: <Camera size={28} />,
     color: 'from-blue-500 to-cyan-500',
     github: 'https://github.com/Akash7367/faceReco',
     category: 'Computer Vision',
   },
   {
-    title: 'Virtual Mouse Controller',
-    description: 'Controlled mouse cursor and volume using hand gestures. Built with MediaPipe for hand tracking, OpenCV for image processing, and NumPy for coordinate mapping.',
-    tech: ['MediaPipe', 'OpenCV', 'NumPy', 'Python'],
-    icon: <MousePointer size={28} />,
+    title: 'Voice-Controlled Local AI Agent',
+    description: 'An intelligent local agent that works efficiently on 8GB RAM. Features speech recognition, intent classification, and secure local tool execution using LLMs.',
+    tech: ['Python', 'LangChain', 'Llama', 'Whisper'],
+    icon: <Bot size={28} />,
     color: 'from-purple-500 to-pink-500',
-    github: 'https://github.com/Akash7367/virtual-mouse-',
-    category: 'Computer Vision',
+    github: 'https://github.com/Akash7367/Local_AI_Agent',
+    category: 'AI/LLM',
   },
   {
-    title: 'WhatsApp Chat Analyzer',
-    description: 'Performed comprehensive chat insights and data visualization. Analyzed messaging patterns, word frequency, activity timelines, and sentiment from WhatsApp export data.',
-    tech: ['Python', 'Pandas', 'Matplotlib', 'Seaborn'],
-    icon: <MessageSquare size={28} />,
-    color: 'from-green-500 to-emerald-500',
-    github: 'https://github.com/Akash7367/Whatsapp-Chat-Analyser',
-    category: 'Data Science',
+    title: 'HRMS Lite',
+    description: 'A professional HR Management System with employee tracking, attendance logging, and real-time dashboard analytics. Built with FastAPI and React.',
+    tech: ['FastAPI', 'React', 'SQLite', 'SQLAlchemy'],
+    icon: <Database size={28} />,
+    color: 'from-blue-600 to-indigo-600',
+    github: 'https://github.com/Akash7367/ethara_ai-project',
+    category: 'Full-stack',
   },
 ];
 

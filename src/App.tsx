@@ -7,6 +7,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Achievements from './components/Achievements';
+import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import AllProjects from './components/AllProjects';
@@ -17,6 +18,7 @@ function HomePage({ darkMode }: { darkMode: boolean }) {
     <>
       <Hero darkMode={darkMode} />
       <About darkMode={darkMode} />
+      <Experience darkMode={darkMode} />
       <Skills darkMode={darkMode} />
       <Projects darkMode={darkMode} />
       <Achievements darkMode={darkMode} />

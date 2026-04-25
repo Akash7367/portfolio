@@ -70,9 +70,11 @@ const skillCategories = [
     skills: [
       { name: 'Transformers', level: 82 },
       { name: 'HuggingFace', level: 80 },
-      { name: 'LangChain', level: 78 },
-      { name: 'RAG', level: 75 },
-      { name: 'Prompt Engineering', level: 85 },
+      { name: 'LangChain', level: 85 },
+      { name: 'RAG', level: 82 },
+      { name: 'Llama/GPT', level: 85 },
+      { name: 'Whisper', level: 80 },
+      { name: 'Prompt Engineering', level: 88 },
     ],
   },
   {
@@ -93,9 +95,10 @@ const skillCategories = [
     skills: [
       { name: 'Git', level: 90 },
       { name: 'Docker', level: 65 },
-      { name: 'MySQL', level: 80 },
-      { name: 'PostgreSQL', level: 75 },
-      { name: 'FAISS/ChromaDB', level: 78 },
+      { name: 'AWS (EC2)', level: 70 },
+      { name: 'Render', level: 75 },
+      { name: 'Tableau', level: 80 },
+      { name: 'FAISS/ChromaDB', level: 82 },
     ],
   },
 ];
@@ -212,9 +215,10 @@ export default function Skills({ darkMode }: SkillsProps) {
               'Python', 'Java', 'C/C++', 'R', 'SQL', 'Pandas', 'NumPy',
               'Matplotlib', 'Seaborn', 'Scikit-learn', 'TensorFlow', 'Keras',
               'OpenCV', 'YOLOv8', 'MediaPipe', 'Transformers', 'HuggingFace',
-              'LangChain', 'Flask', 'FastAPI', 'Streamlit', 'Git', 'Docker',
-              'MySQL', 'PostgreSQL', 'FAISS', 'ChromaDB', 'Pinecone',
-              'HTML', 'CSS', 'CI/CD', 'RAG', 'Prompt Engineering'
+              'LangChain', 'Llama', 'Whisper', 'Flask', 'FastAPI', 'Streamlit', 
+              'Git', 'Docker', 'AWS', 'Render', 'Tableau', 'MySQL', 'PostgreSQL', 
+              'FAISS', 'ChromaDB', 'Pinecone', 'HTML', 'CSS', 'CI/CD', 'RAG', 
+              'Prompt Engineering'
             ].map((tech, i) => (
               <motion.span
                 key={tech}

@@ -134,7 +134,7 @@ export default function Hero({ darkMode }: HeroProps) {
                 <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
-                href="https://drive.google.com/file/d/12LLJMFJCiNuTOZrlK0GmokbilSw5hyMp/view?usp=sharing"
+                href="https://drive.google.com/file/d/1SGS90vVMxy3UC2HOtsOb2RrwkArStt-Y/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`group inline-flex items-center justify-center px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:-translate-y-1 border-2 ${

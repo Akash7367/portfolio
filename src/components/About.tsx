@@ -60,10 +60,10 @@ export default function About({ darkMode }: AboutProps) {
                   <div>
                     <h3 className="text-xl font-bold mb-2">About Me</h3>
                     <p className={`leading-relaxed mb-3 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                      I am a highly motivated aspiring AI Engineer and Data Scientist with a strong foundation in Machine Learning, Deep Learning, and Computer Vision. I am deeply passionate about building intelligent systems that solve real-world problems. From developing real-time face recognition systems to building interactive ML pipelines and automation bots, I love analyzing data to create actionable intelligence.
+                      I am a highly motivated AI Engineer and Data Scientist with a strong foundation in Machine Learning, Deep Learning, and Computer Vision. I specialize in building intelligent systems that solve real-world problems, from anti-spoofing face recognition to RAG-based AI agents. Passionate about turning complex data into actionable intelligence.
                     </p>
                     <p className={`leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                      I am actively seeking entry-level roles and internships in Data Science, Machine Learning, and AI Engineering where I can contribute to innovative projects and continue to grow as a developer.
+                      I am actively seeking roles and internships in Data Science, Machine Learning, and AI Engineering where I can contribute to innovative projects and leverage my skills in LLMs, LangChain, and Computer Vision.
                     </p>
                   </div>
                 </div>
@@ -109,9 +109,9 @@ export default function About({ darkMode }: AboutProps) {
                   <div>
                     <h3 className="text-xl font-bold mb-2">Focus Areas & Interests</h3>
                     <p className={`text-sm leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                      <strong className={darkMode ? 'text-gray-300' : 'text-gray-700'}>Data Science:</strong> Predictive Modeling, Statistical Analysis, and extracting actionable insights from complex datasets.<br className="mb-1" />
-                      <strong className={darkMode ? 'text-gray-300' : 'text-gray-700'}>Machine Learning:</strong> Supervised & Unsupervised Learning, Feature Engineering, and Model Optimization.<br className="mb-1" />
-                      <strong className={darkMode ? 'text-gray-300' : 'text-gray-700'}>Artificial Intelligence:</strong> Deep Learning, Computer Vision, Natural Language Processing (LLMs & RAG), and building end-to-end AI applications.
+                      <strong className={darkMode ? 'text-gray-300' : 'text-gray-700'}>Data Science:</strong> EDA, Predictive Modeling, Statistical Analysis, and Business Intelligence (Tableau).<br className="mb-1" />
+                      <strong className={darkMode ? 'text-gray-300' : 'text-gray-700'}>Machine Learning:</strong> Supervised & Unsupervised Learning, Feature Engineering, and MLOps.<br className="mb-1" />
+                      <strong className={darkMode ? 'text-gray-300' : 'text-gray-700'}>Generative AI:</strong> LLMs (GPT, Llama), RAG, LangChain, and building Agentic Workflows.
                     </p>
                   </div>
                 </div>
