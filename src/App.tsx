@@ -1,4 +1,3 @@
-console.log("App.tsx loading...");
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -31,35 +30,6 @@ function HomePage({ darkMode }: { darkMode: boolean }) {
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
-  const [loading, setLoading] = useState(true);
-  console.log("Current loading state:", loading);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1500);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return (
-      <div className={`min-h-screen flex items-center justify-center ${darkMode ? 'bg-gray-950' : 'bg-white'}`}>
-        <div className="text-center">
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-            className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full mx-auto mb-4"
-          />
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className={`text-lg font-semibold ${darkMode ? 'text-white' : 'text-gray-900'}`}
-          >
-            Loading Portfolio...
-          </motion.p>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <Router>
