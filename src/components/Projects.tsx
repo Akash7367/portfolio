@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Code2, MessageSquare, Camera, MousePointer, ArrowRight, Bot } from 'lucide-react';
+import { ExternalLink, Code2, MessageSquare, Camera, MousePointer, ArrowRight, Bot, Database } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface ProjectsProps {
