@@ -104,7 +104,7 @@ export default function Hero({ darkMode }: HeroProps) {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl sm:text-2xl font-semibold mb-4 gradient-text-alt"
             >
-              Data Science, AI & ML Student
+              Founder of AI Teacher | AI & ML Engineer
             </motion.p>
 
             <motion.p
@@ -115,7 +115,7 @@ export default function Hero({ darkMode }: HeroProps) {
                 darkMode ? 'text-gray-400' : 'text-gray-500'
               }`}
             >
-              Turning Data into Intelligence. Final-year B.Tech student actively seeking full-time roles and internships in Data Science, Artificial Intelligence, and Machine Learning.
+              Turning Data into Intelligence. Recently graduated B.Tech in AI & ML, and the founder of the AI Teacher app. Passionate about building intelligent systems and deploying scalable generative AI applications.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -134,7 +134,7 @@ export default function Hero({ darkMode }: HeroProps) {
                 <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
-                href="https://drive.google.com/file/d/1SGS90vVMxy3UC2HOtsOb2RrwkArStt-Y/view?usp=sharing"
+                href="https://drive.google.com/file/d/1PEpYZmdsC5ZO7Be2-5SI3bAYTAcjfALz/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`group inline-flex items-center justify-center px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:-translate-y-1 border-2 ${

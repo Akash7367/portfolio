@@ -23,6 +23,17 @@ interface Project {
 
 const allProjects: Project[] = [
   {
+    name: 'AI Teacher - Interactive AI Tutoring Application',
+    description: 'An interactive AI-powered teaching application that provides personalized tutoring, real-time feedback, and dynamic adaptive learning paths.',
+    language: 'Python/React',
+    category: 'AI/LLM',
+    icon: <Bot size={24} />,
+    color: 'from-orange-500 to-amber-500',
+    github: 'https://github.com/Akash7367/AI_Teachar',
+    Live_Link: 'https://ai-teaher-is62.vercel.app/',
+    updated: 'Just now',
+  },
+  {
     name: 'HRMS Lite - Human Resource Management System',
     description: 'A lightweight, professional HRMS built for end-to-end full-stack development. Features employee management, attendance tracking, and a real-time dashboard with department analytics.',
     language: 'Python/React',

@@ -63,7 +63,7 @@ export default function About({ darkMode }: AboutProps) {
                       I am a highly motivated AI Engineer and Data Scientist with a strong foundation in Machine Learning, Deep Learning, and Computer Vision. I specialize in building intelligent systems that solve real-world problems, from anti-spoofing face recognition to RAG-based AI agents. Passionate about turning complex data into actionable intelligence.
                     </p>
                     <p className={`leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                      I am actively seeking roles and internships in Data Science, Machine Learning, and AI Engineering where I can contribute to innovative projects and leverage my skills in LLMs, LangChain, and Computer Vision.
+                      As the founder of the AI Teacher app and a recent graduate, I am actively seeking roles in Data Science, Machine Learning, and AI Engineering where I can contribute to innovative projects and leverage my skills in LLMs, LangChain, and Computer Vision.
                     </p>
                   </div>
                 </div>
@@ -80,7 +80,7 @@ export default function About({ darkMode }: AboutProps) {
                       <div className="relative">
                         <div className={`absolute -left-[21px] top-1.5 w-2 h-2 rounded-full ring-4 ${darkMode ? 'bg-blue-400 ring-gray-900 border border-gray-900' : 'bg-blue-500 ring-white border border-white'}`} />
                         <h4 className={`font-bold ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>B.Tech in Artificial Intelligence & Machine Learning</h4>
-                        <p className={`text-sm mt-1 mb-1 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>8th Semester, Class of 2026</p>
+                        <p className={`text-sm mt-1 mb-1 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Class of 2026 (Graduated)</p>
                         <span className={`inline-block text-xs font-semibold px-2 py-1 rounded-md ${darkMode ? 'bg-green-500/10 text-green-400' : 'bg-green-50 text-green-600'}`}>CGPA: 8.13/10</span>
                       </div>
 
